@@ -1,0 +1,211 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    font-family:'Poppins','sans-serif';
+    box-sizing: border-box;
+}
+.container{
+    min-height: 100vh;
+    width: 100%;
+     background:linear-gradient(135deg,#690b81,#000000); 
+    /* background-image:url('background.jpg'); */
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px; 
+    
+}
+.logo{
+      width: 100%;
+      max-width: 540px;
+      background-color: rgb(225, 158, 81);
+      margin:100px auto 20px;
+      padding: 40px 30px 70px;
+      border-radius: 10px;
+      display: flex;
+      flex-direction: column;
+      
+    
+}
+.logo h2{
+       color:#002765;
+       display: flex;
+       gap: 7px;
+       margin-bottom: 20px;
+       align-items: center;
+}
+.logo h2 img{
+    height: 30px;
+    width: 30px;
+}
+.search{
+    height: 3vw;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    background-color: #edeef0;
+    border-radius: 30px;
+    margin-bottom: 20px;
+
+}
+ #inputBox{
+    flex:1;
+    outline: none;
+    background: transparent;
+    background-color: #edeef0;
+    border: none;
+    height: 3vw;
+    padding-left: 18px;
+    border-radius: 30px;
+}
+.search button{
+    background-color: rgb(204, 53, 45);
+    color:#FFF;
+    font-size: 11px;
+    border: none;
+    height: 3vw;
+    width: 15%;
+    border-radius:30px;
+    cursor: pointer;
+}
+.search button:active{
+    background-color:  rgb(180, 34, 26);
+}
+#listContainer li{
+    word-break: break-word; 
+    font-size: 17px;
+    padding:10px 8px 12px 50px;
+    list-style: none;
+    user-select: none;
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+    align-content:center;
+    text-wrap: wrap;
+   
+}
+#listContainer li span{
+    position: absolute;
+    flex-shrink: 0px;
+    display: block;
+    z-index: 1;
+    right: 0px;
+    top:5px;
+    width: 40px;
+    height: 40px;
+    font-size: 22px;
+    color: #555;
+    line-height: 40px;
+    text-align: center;
+    
+    
+}
+#listContainer li span:hover{
+    background-color: #d6d6d7;
+    border-radius: 50%;
+}
+#listContainer li::before{  
+    content: '';
+    height: 28px;
+    width: 28px;
+    position: absolute;
+    border-radius: 50%;
+    background-image: url(unchecked.png);
+    background-size: cover;
+    background-position: center;
+    top:px;
+    left:8px;
+
+}
+#listContainer li.checked{
+    text-decoration: line-through;
+    color:#553;
+}
+#listContainer li.checked::before{
+    background-image: url(checked.png);
+}
+#clearButton{
+   align-self: flex-end;
+   transform: translateY(60px);
+   border-radius: 30px;
+   width: 80px;
+   background-color:rgb(204, 53, 45) ;
+   border: none;
+   height: 30px;
+   color: #fff;
+}
+@media screen and (max-width:640px) {
+    .search{
+        height: 8vw;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        background-color: #edeef0;
+        border-radius: 30px;
+        margin-bottom: 20px;
+    
+    }
+     #inputBox{
+        flex:1;
+        outline: none;
+        background: transparent;
+        background-color: #edeef0;
+        border: none;
+        height: 3vw;
+        padding-left: 18px;
+        border-radius: 30px;
+    }
+    .search button{
+        background-color: rgb(204, 53, 45);
+        color:#FFF;
+        font-size: 11px;
+        border: none;
+        height: 8vw;
+        width: 15%;
+        border-radius:30px;
+        cursor: pointer;
+    }
+    .search button:active{
+        background-color:  rgb(180, 34, 26);
+    }
+}
+@media screen and (max-width:1040px) {
+    .search{
+        height: 4vw;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        background-color: #edeef0;
+        border-radius: 30px;
+        margin-bottom: 20px;
+    
+    }
+     #inputBox{
+        flex:1;
+        outline: none;
+        background: transparent;
+        background-color: #edeef0;
+        border: none;
+        height: 3vw;
+        padding-left: 18px;
+        border-radius: 30px;
+    }
+    .search button{
+        background-color: rgb(204, 53, 45);
+        color:#FFF;
+        font-size: 11px;
+        border: none;
+        height: 4vw;
+        width: 15%;
+        border-radius:30px;
+        cursor: pointer;
+    }
+    .search button:active{
+        background-color:  rgb(180, 34, 26);
+    }
+}
