@@ -36,7 +36,9 @@
        gap: 7px;
        margin-bottom: 20px;
        align-items: center;
+       
 }
+
 .logo h2 img{
     height: 30px;
     width: 30px;
@@ -49,7 +51,6 @@
     background-color: #edeef0;
     border-radius: 30px;
     margin-bottom: 20px;
-
 }
  #inputBox{
     flex:1;
@@ -88,6 +89,9 @@
     align-content:center;
     text-wrap: wrap;
    
+}
+#listContainer li p{
+      width: 388px;
 }
 #listContainer li span{
     position: absolute;

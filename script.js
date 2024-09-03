@@ -7,7 +7,9 @@ button.addEventListener('click',()=>{
     }
     else{
         let li=document.createElement('li');
-        li.innerHTML=searchBox.value;
+        let p=document.createElement('p');
+        p.innerHTML=searchBox.value
+        li.appendChild(p);
         List.appendChild(li);
         let span=document.createElement('span');
         span.innerHTML='\u00d7';
